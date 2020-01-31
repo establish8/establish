@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>MONAMI 모나미</title>
+	<style type="text/css">
+		/*초기화*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		li{
+			list-style: none;
+		}
+		body{
+			font-family:NanumBarunGothic;
+            font-size:16px;
+            color:#231f20;
+		}
+		/*#main_header*/
+		#main_header{
+			width: 100%;
+			height: 103px;
+			background-color: #ffffff;
+			border-bottom: 2px solid #231f20;
+			position: relative;
+		}
+		#logo{
+			position: absolute;
+			top: 42px;
+			left: 20%;
+		}
+		#main_nav{
+			margin-left: 40%;
+		}
+		.main_li{
+			padding: 52px 54px 0 0;
+			float:left;
+		}
+		.main_li_a{
+			font-size: 16px;
+			text-align: center;
+			color: #231f20;
+			margin-bottom: 34px;
+			display: block;
+		}
+		.main_li_a:hover{
+			color: #c40f39;
+		}
+		/*#main_banner*/
+		#main_banner{
+			width: 100%;
+			height: 300px;
+			position: relative;
+		}
+		#banner_wrap{
+			width: 1020px;
+			height: 300px;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%);
+		}
+		#banner_wrap:hover #b_in{
+			background-color: rgba(255,255,255,0.8);
+		}
+		#b{
+			width: 500px;
+			height: 180px;
+			background-color: rgba(0,0,0,0.5);
+			position: absolute;
+			top: 118px;
+		}
+		#b_in{
+			width: 460px;
+			height: 140px;
+			background-color: rgba(255,255,255,0.5);
+			position: absolute;
+			top: 138px;
+			left: 20px;
+		}
+		#b_text{
+			position: absolute;
+			top: 54%;
+			left: 78px;
+			color: #222222;
+			text-align: left;
+			font-size: 14px;
+			line-height: 18px;
+		}
+		#conceptstore_logo{
+			position: absolute;
+			top: 66%;
+			left: 310px;
+		}
+		/*#product_wrap*/
+		#product_wrap{
+			width: 1020px;
+			height: 460px;
+			margin: 42px auto;
+			position: relative
+		}
+		#p_title{
+			width: 245px;
+			height: 235px;
+			margin-right: 10px;
+			float: left;
+		}
+		#p_bar{
+			width: 245px;
+			height: 28px;
+			background-color: #c40f39;
+			margin-bottom: 24px;
+		}
+		#p_text{
+			color: #c40f39;
+			font-size: 32px;
+			position: absolute;
+			left: 85px;
+		}
+		/*.product*/
+		.product{
+			float: left;
+			width: 235px;
+			height: 212px;
+			margin: 0 10px;
+			position: relative;
+		}
+		.p_text{
+			color: #4a4849;
+			font-size: 14px;
+			text-align: right;
+			padding-right: 10px;
+		}
+		.p_cover{
+			background-color: rgba(255,255,255,0.5);
+			width: 235px;
+			height: 212px;
+			position: absolute;
+			top: 0;
+		}
+		.p_more{
+			position: absolute;
+			right: 0;
+			bottom: 22px;
+		}
+		#p_wrap2{
+			clear: both;
+		}
+		.product2{
+			float: left;
+			width: 490px;
+			height: 190px;
+			margin: 10px 10px;
+			position: relative;
+		}
+		.p_cover2{
+			width: 490px;
+			height: 190px;
+			background-color: rgba(255,255,255,0.5);
+			position: absolute;
+			top: 0;
+		}
+		.p_more2{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		/*#content_wrap*/
+		#content_wrap{
+			width: 1020px;
+			height: 300px;
+			margin: 42px auto;
+		}
+		.content{
+			width: 33.3333%;
+			height: 300px;
+			float: left;
+		}
+		.c_in{
+			width: 210px;
+			height: 240px;
+			background-color: #231f20;
+			margin-top: 30px;
+			margin-left: 20%;
+		}
+		#c1{
+			background-color: #eeeeee;
+		}
+		#c2{
+			background-color: #231f20;
+		}
+		#c3{
+			background-image: url(img/content.jpg);
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+		.c_title{
+			color: #ffffff;
+			font-size: 36px;
+			font-weight: 500;
+			text-align: center;
+			padding-top: 24px;
+		}
+		.c_bar{
+			width: 100px;
+			height: 4px;
+			background-color: #c40f39;
+			margin-top: 21px;
+			margin-left: -14px;
+		}
+		.c_text{
+			color: #ffffff;
+			font-size: 14px;
+			font-weight: 300;
+			text-align: center;
+			padding-top: 38px;
+		}
+		.c_in:hover{
+			width: 240px;
+			height: 240px;
+			background-color: #231f20;
+			margin-top: 30px;
+			margin-left: 14.7%;
+		}
+		.c_in:hover .c_bar{
+			display: none;
+		}
+		.c_in:hover .c_text{
+			padding-top: 63px;
+		}
+		#inklap_logo{
+			margin-top: 76px;
+			margin-left: 23.8%;
+		}
+		#inklap_reserve{
+			color: #ffffff;
+			font-size: 21px;
+			font-weight: 300;
+			text-align: center;
+			line-height: 48px;
+			width: 148px;
+			height: 48px;
+			border: 1px solid #ffffff;
+			margin-top: 28px;
+			margin-left: 28%;
+		}
+		#inklap_reserve:hover{
+			background-color: rgba(255,255,255,0.5);
+		}
+		/*#main_footer*/
+		#main_footer{
+			width: 100%;
+			height: 180px;
+			background-color: #231f20;
+			color: #eeeeee;
+			font-size: 14px;
+		}
+		#logo2{
+			margin-top: 34px;
+			margin-left: 20%;
+			float: left;
+		}
+		.info{
+			float: left;
+			margin: 34px 80px;
+		}
+		#info_customer{
+			margin-left: -30px;
+			margin-right: 84px;
+		}
+		#sns_wrap{
+			float: left;
+			margin-top: 34px;
+		}
+		.sns{
+			margin: 0 15px;
+		}
+		#copyright{
+			clear: both;
+			text-align: center;
+		}
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.p_cover').hide();
+			$('.p_cover2').hide();
+			$('.p_more').hide();
+			$('.p_more2').hide();
+			//.product hover
+			$('.product').hover(function(){
+				$('.p_cover, .p_more',this).stop(true,false).fadeIn();
+			}, function(){
+				$('.p_cover, .p_more',this).stop(true,false).fadeOut();
+			});
+			//.product2 hover
+			$('.product2').hover(function(){
+				$('.p_cover2, .p_more2',this).stop(true,false).fadeIn();
+			}, function(){
+				$('.p_cover2, .p_more2',this).stop(true,false).fadeOut();
+			});
+		});
+	</script>
+</head>
+<body>
+	<header id="main_header">
+		<a href="index.html" id="logo">
+			<img src="img/logo.png" alt="MONAMI LOGO"/></a>
+		<!--#logo-->
+		<nav id="main_nav">
+			<ul>
+				<li class="main_li"><a href="#" class="main_li_a">모나미 소개</a>
+				</li>
+				<!--.main_li(1)-->
+				<li class="main_li"><a href="#" class="main_li_a">제&nbsp;&nbsp;&nbsp;품</a>
+				</li>
+				<!--.main_li(2)-->
+				<li class="main_li"><a href="#" class="main_li_a">컨셉스토어</a></li>
+				<!--.main_li(3)-->
+				<li class="main_li"><a href="#" class="main_li_a">고객지원</a>
+				</li>
+				<!--.main_li(4)-->
+				<li class="main_li"><a href="#" class="main_li_a">소&nbsp;&nbsp;&nbsp;식</a>
+				</li>
+				<!--.main_li(5)-->
+			</ul>
+		</nav>
+		<!--#main_nav-->
+	</header>
+	<!--#main_header-->
+	<div id="main_banner">
+		<a href="#">
+			<div id="banner_wrap">
+			<img src="img/banner.jpg" alt="conceptstore" />
+				<div id="b"></div>
+				<div id="b_in"></div>
+				<div id="b_text">
+					상품을 직접 경험해보고<br/>상품에 대한 정보를 얻으며<br/>
+					나만의 개성에 맞는<br/>상품을 적극적으로 만들 수 있는<br/>
+					소통과 체험의 복합공간
+				</div>
+				<img src="img/logo_conceptstore.png" alt="conceptstore logo" id="conceptstore_logo" />
+			</div>
+		</a>
+	</div>
+	<!--#main_banner-->
+	<div id="product_wrap">
+		<div id="p_title">
+			<div id="p_bar"></div>
+			<div id="p_text">NEW<br/> ARRIVALS</div>
+		</div>
+		<a href="#">
+			<div class="product">
+				<img src="img/product01.jpg" alt="153 DIY 유성볼펜" />
+				<div class="p_text">153 DIY 유성볼펜</div>
+				<div class="p_cover"></div>
+				<img src="img/product_more.png" class="p_more"/>
+			</div>
+		</a>
+		<!--.product(1)-->
+		<a href="#">
+			<div class="product">
+				<img src="img/product02.jpg" alt="153 골드&실버" />
+				<div class="p_text">153 골드&실버</div>
+				<div class="p_cover"></div>
+				<img src="img/product_more.png" class="p_more"/>
+			</div>
+		</a>
+		<!--.product(2)-->
+		<a href="#">
+			<div class="product">
+				<img src="img/product03.jpg" alt="바우하우스 육각지우개연필"/>
+				<div class="p_text">바우하우스 육각지우개연필</div>
+				<div class="p_cover"></div>
+				<img src="img/product_more.png" class="p_more"/>
+			</div>
+		</a>
+		<!--.product(3)-->
+		<div id="p_wrap2"></div>
+		<a href="#">
+			<div class="product2">
+				<img src="img/product04.jpg" alt="153 네오만년필" />
+				<div class="p_text">153 네오만년필</div>
+				<div class="p_cover2"></div>
+				<img src="img/product_more.png" class="p_more2"/>
+			</div>
+		</a>
+		<!--.product(4)-->
+		<a href="#">
+			<div class="product2">
+				<img src="img/product05.jpg" alt="잉크 DIY" />
+				<div class="p_text">잉크 DIY</div>
+				<div class="p_cover2"></div>
+				<img src="img/product_more.png" class="p_more2"/>
+			</div>
+		</a>
+		</div>
+		<!--.product(5)-->
+	</div>
+	<!--#product_wrap-->
+	<div id="content_wrap">
+		<a href="#">
+			<div class="content" id="c1">
+				<div class="c_in">
+					<div class="c_title">NEWS</div>
+					<div class="c_bar"></div>
+					<div class="c_text">
+						모나미는 늘 밝고 새로운<br/>미래를 그려 나갑니다.
+					</div>
+				</div>
+			</div>
+		</a>
+		<!--.content(1)-->
+		<a href="#">
+			<div class="content" id="c2">
+				<img src="img/inklap.png" id="inklap_logo"/>
+				<div id="inklap_reserve">예약하기</div>
+			</div>
+		</a>
+		<!--.content(2)-->
+		<a href="#">
+			<div class="content" id="c3">
+				<div class="c_in">
+					<div class="c_title">CLASS</div>
+					<div class="c_bar"></div>
+					<div class="c_text">
+						모나미와 함께하는<br/>원데이 클래스.
+					</div>
+				</div>
+			</div>
+		</a>
+		<!--.content(3)-->
+	</div>
+	<!--#content_wrap-->
+	<footer id="main_footer">
+		<img src="img/logo02.png" alt="logo_white" id="logo2"/>
+		<div class="info">
+			경기도 용인시 수지구 손곡로 17<br/>
+			TEL : 031-216-0153<br/>
+			FAX : 031-270-5154
+		</div>
+		<div class="info" id="info_customer">
+			CUSTOMER CENTER<br/>
+			080-022-0153<br/>
+		</div>
+		<div id="sns_wrap">
+			<img src="img/sns_facebook.png" class="sns"/>
+			<img src="img/sns_instagram.png" class="sns"/>
+		</div>
+		<div id="copyright">COPYRIGHT(C) 2017 MONAMI.CO.,LTD. ALL RIGHTS RESERVED.</div>
+	</footer>
+	<!--#main_footer-->
+</body>
+</html>

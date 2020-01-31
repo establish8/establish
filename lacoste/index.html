@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="vieport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0"/>
+	<meta charset="utf-8" />
+	<title>LACOSTE</title>
+	<style type="text/css">
+		/*reset*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		img{
+			border: 0;
+		}
+		body{
+			font-family: Arial;
+		}
+		/*#header*/
+		.in_1200{
+			width: 1200px;
+			margin: 0 auto;
+			position: relative;
+		}
+		#header{
+			background-color: #f8f8f8;
+			width: 100%;
+			height: 84px;
+		}
+		#logo{
+			width: 203px;
+			height: 32px;
+			position: absolute;
+			top: 28px;
+			left: 10.25%;
+		}
+		/*#nav*/
+		#nav{
+			margin-left: 38%;
+			position: absolute;
+			z-index: 1;
+		}
+		.gnb{
+			float: left;
+			margin: 31px 21px 19px 21px;
+		}
+		.gnb a{
+			font-size: 20px;
+			line-height: 21px;
+			color: #000000;
+			text-align: center;
+		}
+		#lnb{
+			clear: both;
+		}
+		.lnb{
+			float: left;
+			margin-top: 30px;
+		}
+		.lnb li{
+			padding: 0 48px;
+			padding-bottom: 16px;
+		}
+		.lnb a{
+			font-size: 16px;
+			color: #555555;
+			text-align: center;
+			display: block;
+			transform: translate(0, -50%);
+		}
+		.lnb_in{
+			font-weight: 600;
+		}
+		#lnb_bg{
+			width: 100%;
+			height: 315px;
+			background-color: rgba(248,248,248,0.9);
+			position: absolute;
+			top: 84px;
+			z-index: 1;
+		}
+		/*#banner*/
+		#banner_wrap{
+			width: 100%;
+			height: 500px;
+			position: relative;
+			margin-bottom: 110px;
+		}
+		.b_img{
+			width: 50%;
+			height: 500px;
+			float: left;
+		}
+		#intro{
+			font-size: 32px;
+			color: #303030;
+			position: absolute;
+			top: 192px;
+			left: 38px;
+		}
+		#arrow{
+			font-size: 32px;
+			color: #303030;
+			position: absolute;
+			top: 242px;
+			left: 483px;
+		}
+		#border{
+			position: absolute;
+			top: 6.6%;
+			right: 3.083%;
+			width: 43.583%;
+			height: 87.2%;
+			border: solid 4px #ffffff;
+		}
+		/*#product_wrap*/
+		#product_wrap{
+			width: 65%;
+			margin: 0 auto;
+		}
+		.product{
+			float: left;
+			margin-right: 42px;
+			margin-bottom: 30px;
+		}
+		.p_img{
+			max-width: 100%;
+			height: auto;
+		}
+		.p_title{
+			font-size: 14px;
+			line-height: 42px;
+			text-align: left;
+			color: #303030;
+		}
+		#p_title02{
+			line-height: 21px;
+		}
+		.p_price{
+			font-size: 14px;
+			color: #303030;
+			line-height: 18px;
+			text-align: right;
+		}
+		#product_wrap::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		/*#campaign*/
+		#campaign{
+			background-color: #d8d9da;
+			width: 100%;
+			height: 713px;
+			margin-top: 40px;
+			position: relative;
+		}
+		#c_b_text{
+			font-family: Impact;
+			font-size: 320px;
+			line-height: 350px;
+			text-align: center;
+			color: #d8d9da;
+			-webkit-text-stroke: 2px #ffffff;
+			display: block;
+		}
+		.c_img{
+			position: absolute;
+		}
+		#c_img01{
+			top: 94px;
+			left: 0.833%;
+		}
+		#c_img02{
+			top: 201px;
+			left: 25.833%;
+		}
+		#c_img03{
+			top: 95px;
+			right: 0.833%;
+		}
+		#c_intro{
+			width: 41.333%;
+			height: 177px;
+			background-color: #1b5732;
+			position: absolute;
+			top: 0;
+			right: 15.416%;
+			color: #ffffff;
+			font-family: Impact;
+		}
+		#c_in01{
+			font-family: Arial;
+			font-size: 21px;
+			transform: translate(10%,110%);
+		}
+		#c_in02{
+			font-size: 63px;
+			text-align: center;
+			transform: translate(0,-50%);
+			margin-top: 77px;
+		}
+		/*#event*/
+		#event{
+			margin-top: 105px;
+			background-color: #303030;
+			width: 100%;
+			height: 469px;
+			margin-bottom: 312px;
+		}
+		#e_bar{
+			width: 10.166%;
+			height: 4px;
+			background-color: #ffffff;
+			float: left;
+			margin-top: 36px;
+			margin-right: 10px;
+		}
+		#e_title{
+			color: #ffffff;
+			font-size: 30px;
+			line-height: 76px;
+		}
+		.e_in{
+			float: left;
+			margin: 0 2.5%;
+			height: 579px;
+			position: relative;
+		}
+		.e_img{
+			max-width: 100%;
+			height: auto;
+		}
+		.e_intro{
+			width: 167px;
+			height: 55px;
+			background-color: #303030;
+			color: #ffffff;
+			font-size: 20px;
+			line-height: 24px;
+			text-align: center;
+			line-height: 55px;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		/*#footer*/
+		#footer{
+			width: 100%;
+			height: 288px;
+			background-color: #f8f8f8;
+			position: relative;
+		}
+		#footer .in_1200::after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		#footer .in_1200{
+			background-image: url(img/f_b_img.png);
+			background-repeat: no-repeat;
+			background-position: 9%, 50%;
+		}
+		.f_li{
+			font-size: 15px;
+			color: #292929;
+			font-weight: 600;
+			line-height: 41px;
+			float: left;
+			margin: 0 74px;
+			margin-top: 41px;
+		}
+		.f_li li{
+			font-size: 14px;
+			color: #292929;
+			font-weight: 500;
+			line-height: 28px;
+		}
+		.f_li a{
+			font-size: 14px;
+			color: #292929;
+			font-weight: 500;
+		}
+		.f_li .h_c{
+			line-height: 22px;
+		}
+		#email{
+			text-decoration: underline;
+		}
+		#find{
+			width: 16.666%;
+			height: 58px;
+			border: solid 2px #292929;
+			color: #292929;
+			font-size: 16px;
+			font-weight: 600;
+			text-align: center;
+			line-height: 58px;
+			position: absolute;
+			top: 75px;
+			right: 4.833%;
+		}
+		/*화면너비 0~768px*/
+		@media (max-width: 768px){}
+		/*화면너비 0~480px*/
+		@media (max-width: 480px){}
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//nav hover
+			$('#lnb, #lnb_bg').hide();
+			$('.gnb, #lnb').hover(function(){
+				$('#lnb, #lnb_bg').stop(true,false).slideDown();
+			}, function(){
+				$('#lnb, #lnb_bg').stop(true,false).slideUp(900);
+			});
+			//banner hover
+			$('#banner_wrap',this).hover(function(){
+				$('#border',this).stop(true,false).css("border", "solid 4px #1b5732");
+			}, function(){
+				$('#border',this).stop(true,false).css("border", "solid 4px #ffffff");
+			});
+			//product hover
+			$('.product').hover(function(){
+				$('.p_title, .p_title2',this).stop(true,false).css("text-decoration", "underline");
+			}, function(){
+				$('.p_title, .p_title2',this).stop(true,false).css("text-decoration", "none");
+			});
+			//event hover
+			$('.e_in').hover(function(){
+				$('#event').stop(true,false).css("background-color", "#1b5732");
+				$('.e_intro',this).stop(true,false).css("background-color", "#1b5732");
+			}, function(){
+				$('#event').stop(true,false).css("background-color", "#303030");
+				$('.e_intro',this).stop(true,false).css("background-color", "#303030");
+			});
+		});
+	</script>
+</head>
+<body>
+	<header id="header">
+		<div id="lnb_bg"></div>
+		<div class="in_1200">
+		<a href="index.html" id="logo">
+			<img src="img/logo.png" alt="logo"/>
+		</a>
+		<!--#logo-->
+		<nav id="nav">
+		<ul id="gnb">
+			<li class="gnb">
+				<a href="#">Men</a>
+			</li>
+			<li class="gnb">
+				<a href="#">Women</a>
+			</li>
+			<li class="gnb">
+				<a href="#">Kids</a>
+			</li>
+			<li class="gnb">
+				<a href="#">Accessories</a>
+			</li>
+			<li class="gnb">
+				<a href="#">Sale</a>
+			</li>
+		</ul>
+		<ul id="lnb">
+			<li class="lnb">
+				<ul>
+					<li><a href="#" class="lnb_in">CLOTHING</a></li>
+					<li><a href="#">Polos</a></li>
+					<li><a href="#">T-shirts</a></li>
+					<li><a href="#">Sweaters</a></li>
+					<li><a href="#">Sweatshirts</a></li>
+					<li><a href="#">shirts</a></li>
+					<li><a href="#">Pants</a></li>
+					<li><a href="#">Jackets&Coats</a></li>
+					<li><a href="#">Underwear</a></li>
+				</ul>
+			</li>
+			<li class="lnb">
+				<ul>
+					<li><a href="#" class="lnb_in">SHOES</a></li>
+					<li><a href="#" class="lnb_in">BAGS</a></li>
+					<li><a href="#" class="lnb_in">OTHERS</a></li>
+				</ul>
+			</li>
+		</ul>
+		</nav>
+		<!--#nav-->
+		</div>
+	</header>
+	<!--#header-->
+	<div id="banner">
+		<div class="in_1200">
+		<a href="#">
+			<div id="banner_wrap">
+				<img src="img/b_img01.jpg" alt="banner_left" class="b_img"/>
+				<img src="img/b_img02.jpg" alt="banner_right" class="b_img"/>
+				<div id="intro">MEET</br>THE</br>ONLINE</br>ONLY</div>
+				<div id="arrow">→</div>
+				<div id="border"></div>
+			</div>
+		</a>
+		</div>
+	</div>
+	<!--#banner-->
+	<div class="in_1200">
+		<div id="product_wrap">
+			<a href="#">
+				<div class="product">
+					<img src="img/p_img01.jpg" alt="Women's Stretch Cotton Piqué Polo Dress" class="p_img"/>
+					<div class="p_title">Women's Stretch Cotton Piqué Polo Dress</div>
+					<div class="p_price">$9.99</div>
+				</div>
+			</a>
+			<!--.product(1)-->
+			<a href="#">
+				<div class="product">
+					<img src="img/p_img02.jpg" alt="Unisex LIVE Signature Print T-shirt" class="p_img"/>
+					<div class="p_title">Unisex LIVE Signature Print T-shirt</div>
+					<div class="p_price">$9.99</div>
+				</div>
+			</a>
+			<!--.product(2)-->
+			<a href="#">
+				<div class="product">
+					<img src="img/p_img03.jpg" alt="Unisex Fashion Show Technical Hat" class="p_img"/>
+					<div class="p_title">Unisex Fashion Show Technical Hat</div>
+					<div class="p_price">$9.99</div>
+				</div>
+			</a>
+			<!--.product(3)-->
+			<a href="#">
+				<div class="product">
+					<img src="img/p_img04.jpg" alt="Men's SPORT Color-Blocked Zip Up Tennis Sweatshirt" class="p_img"/>
+					<div class="p_title" id="p_title02">Men's SPORT Color-Blocked Zip Up</br>Tennis Sweatshirt</div>
+					<div class="p_price">$9.99</div>
+				</div>
+			</a>
+			<!--.product(4)-->
+		</div>
+	</div>
+	<!--#product_wrap-->
+	<div id="campaign">
+		<div class="in_1200">
+			<a href="#">
+				<div id="campaign_wrap">
+					<div id="c_b_text">LACOSTE<br/>LACOSTE</div>
+					<img src="img/c_img01.jpg" alt="my lacoste polo" class="c_img" id="c_img01"/>
+					<img src="img/c_img02.jpg" alt="my lacoste polo" class="c_img" id="c_img02"/>
+					<img src="img/c_img03.jpg" alt="my lacoste polo" class="c_img" id="c_img03"/>
+					<div id="c_intro">
+						<div id="c_in01">Find your own style</div>
+						<div id="c_in02">#MyLacostePolo</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<!--#campaign-->
+	<div id="event">
+		<div class="in_1200">
+			<div id="e_bar"></div>
+			<div id="e_title">Holiday Collection</div>
+			<div id="event_wrap">
+				<div class="e_in">
+					<a href="#">
+						<img src="img/e_img01.jpg" alt="Men Collection" class="e_img"/>
+						<div class="e_intro">Men</div>
+					</a>
+				</div>
+				<div class="e_in">
+					<a href="#">
+						<img src="img/e_img02.jpg" alt="Women Collection" class="e_img"/>
+						<div class="e_intro">Women</div>
+					</a>
+				</div>
+				<div class="e_in">
+					<a href="#">
+						<img src="img/e_img03.jpg" alt="Kids Collection" class="e_img"/>
+						<div class="e_intro">Kids</div>
+					</a>
+				</div>
+				<div class="e_in">
+					<a href="#">
+						<img src="img/e_img04.jpg" alt="Accessories Collection" class="e_img"/>
+						<div class="e_intro">Accessories</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--#event-->
+	<footer id="footer">
+		<div class="in_1200">
+			<ul>
+				<li class="f_li">ABOUT LACOSTE
+					<ul>
+					<li><a href="#">The Lacoste Group</a></li>
+					<li><a href="#">People</a></li>
+					</ul>
+				</li>
+				<li class="f_li">OUR CATEGORIES
+					<ul>
+					<li><a href="#">Men's Collection</a></li>
+					<li><a href="#">Women's Collection</a></li>
+					<li><a href="#">Kid's Collection</a></li>
+					<li><a href="#">Polo Shop</a></li>
+					<li><a href="#">Lacoste Live</a></li>
+					<li><a href="#">Lacoste Sport</a></li>
+					</ul>
+				</li>
+				<li class="f_li">HELP & CONTACTS
+					<ul>
+					<li class="h_c">By phone</li>
+					<li>1-800-452-2678</li>
+					<li class="h_c">By e-mail</li>
+					<li><a href="#" id="email">Click here</a></li>
+					</ul>
+				</li>
+			</ul>
+			<a href="#"><div id="find">Find a boutique</div></a>
+		</div>
+	</footer>
+	<!--#footer-->
+</body>
+</html>
