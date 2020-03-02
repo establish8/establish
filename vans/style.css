@@ -390,6 +390,7 @@ footer .container div{
 	.style img{display: none; max-width: 150px; height: auto; top: 10px; left: 10px;}
 	.style .s_shoe{display: block; margin: 0;}
 	.style p{margin-top: 0;}
+	#best{margin-left: 0;}
 	#best .product{float: none; margin: 10px 0;}
 	footer .container div{top: 80px;}
 	#sns{top: 80px;}
