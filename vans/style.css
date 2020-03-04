@@ -379,18 +379,22 @@ footer .container div{
 	#new{margin-left: 0; text-align: center;}
 	#collabo{margin-right: 0; margin: 0 auto;}
 	#collabo_p{display: none;}
+	#style .title{left: 50%; transform: translateX(-50%);}
 	#best{text-align: center;}
 	#best .product{margin-right: 0; margin: 0 30px;}
 	.style .s_shoe:hover{transform: none;}
 }
 @media (max-width: 480px){
 	#m_nav a{font-size: 16px;}
-	#style{height: 360px;}
+	#banner{display: none;}
+	#new{margin-top: 20px;}
+	#style .title{left: 20%; transform: none;}
+	#style{margin-top: 70px; height: 360px;}
 	.style{width: 50%; height: 120px; background-color: #222222; border-radius: 0; margin: 0; text-align:left;}
-	.style img{display: none; max-width: 150px; height: auto; top: 10px; left: 10px;}
+	.style img{display: none; max-width: 150px; height: auto; top: 8px; left: 10px;}
 	.style .s_shoe{display: block; margin: 0;}
-	.style p{margin-top: 0;}
-	#best{margin-left: 0;}
+	.style p{margin-top: 0; font-weight: 400;}
+	#best{margin-top: 70px; margin-left: 0;}
 	#best .product{float: none; margin: 10px 0;}
 	footer .container div{top: 80px;}
 	#sns{top: 80px;}
